@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Project</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+    <link rel="stylesheet" href="src/styles.css" />
+    
+    <script src="src/index.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-8">
+              <form id = "search-form">
+              <input type="text" placeholder="Enter City Name" 
+              autocomplete = "off"
+              id ="search-text-input"
+              />
+              <input type="submit" value="Search" />
+              <button id="current-location-button">
+                Current
+              </button>
+              </form> 
+            </div>
+      </div>
+    
+
+
+      <h2>
+        New York
+      </h2>
+      <div>
+          <p>
+            <label id="degrees">62°F</label>
+            <button id="fButton">fahrenheit</button>
+            <button id="cButton">celsius</button>
+          </p>
+          
+      </div>
+
+      <div class="row">
+        <div id="date-time" class="col-6">
+          Sunday 09:05
+        </div>
+      </div>
+      <br>
+      <h1> Weekly Forecast </h1>
+      <div class="row">
+          <div class="col">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>65°F</td>
+                  <td>60°F</td>
+                  <td>65°F</td>
+                  <td>40°F</td>
+                  <td>30°F</td>
+                </tr>
+                <tr>
+                  <td>☀️</td> 
+                  <td>🌦</td> 
+                  <td>☀️</td> 
+                  <td>❄️</td> 
+                  <td>🥶</td> 
+                </tr>
+              </tbody>    
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
