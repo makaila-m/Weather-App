@@ -43,9 +43,22 @@ function convertToC() {
 
 function displayWeatherCondition(response) {
   document.querySelector("#search-text-input").innerHTML = response.data.name;
+  document.querySelector("#display-text").innerHTML = response.data.name;
   document.querySelector("#degrees").innerHTML = `${Math.round(
     response.data.main.temp
   )}°C`;
+
+  let iconElement = document.querySelector("#icon");
+
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#description").innerHTML = response.data.weather[0].description;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+   iconElement.setAttribute("alt", response.data.weather[0].description);
+
 }
 
 function searchCity(city) {
@@ -72,9 +85,7 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-// let searchForm = document.querySelector("#search-form");
-console.log('bi');
-console.log(document.querySelector("p"));
+let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
@@ -83,11 +94,5 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 let currentDayTime = document.getElementById("date-time");
 currentDayTime.innerHTML = displayCurrentDayTime();
 
-document.getElementById("fButton").onclick = function () {
-  convertToF();
-};
-document.getElementById("cButton").onclick = function () {
-  convertToC();
-};
 
-searchCity("New York");
+searchCity("Seattle");

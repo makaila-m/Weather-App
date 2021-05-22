@@ -16,8 +16,6 @@
 
 
     <link rel="stylesheet" href="src/styles.css" />
-    
-    <script src="src/index.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -30,64 +28,52 @@
               id ="search-text-input"
               />
               <input type="submit" value="Search" />
+              <button id="current-location-button">
+                Current
+              </button>
               </form> 
             </div>
       </div>
     
 
 
-      <h2>
+      <h2 id="display-text">
         New York
       </h2>
       <div>
           <p>
             <label id="degrees">62°F</label>
-            <button id="fButton">fahrenheit</button>
-            <button id="cButton">celsius</button>
+            <br>
+            <span id="description"></span>
           </p>
           
       </div>
+
+
 
       <div class="row">
         <div id="date-time" class="col-6">
           Sunday 09:05
         </div>
       </div>
-      <br>
-      <h1> Weekly Forecast </h1>
-      <div class="row">
-          <div class="col">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Monday</th>
-                  <th>Tuesday</th>
-                  <th>Wednesday</th>
-                  <th>Thursday</th>
-                  <th>Friday</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>65°F</td>
-                  <td>60°F</td>
-                  <td>65°F</td>
-                  <td>40°F</td>
-                  <td>30°F</td>
-                </tr>
-                <tr>
-                  <td>☀️</td> 
-                  <td>🌦</td> 
-                  <td>☀️</td> 
-                  <td>❄️</td> 
-                  <td>🥶</td> 
-                </tr>
-              </tbody>    
-          </table>
-        </div>
+      <ul>
+        <li>Humidity: <span id="humidity"></span>%</li>
+        <li>Wind: <span id="wind"></span> m/h</li>
+      </ul>
+      <div>
+        <img src="" alt="Clear" id="icon" class="float-left" />
       </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
           <a href="https://github.com/makaila-m/Weather-App"> Open Source code </a> by Makaila M
 
     </div>
+
+    <script src="src/index.js"></script>
   </body>
   </html>
