@@ -1,7 +1,3 @@
-let form = document.querySelector("#search-form");
-
-form.addEventListener("submit", search);
-
 function displayCurrentDayTime() {
   let now = new Date();
   let hours = now.getHours();
@@ -45,16 +41,6 @@ function convertToC() {
   document.getElementById("degrees").innerHTML = "17°C";
 }
 
-var currentDayTime = document.getElementById("date-time");
-currentDayTime.innerHTML = displayCurrentDayTime();
-
-document.getElementById("fButton").onclick = function () {
-  convertToF();
-};
-document.getElementById("cButton").onclick = function () {
-  convertToC();
-};
-
 function displayWeatherCondition(response) {
   document.querySelector("#search-text-input").innerHTML = response.data.name;
   document.querySelector("#degrees").innerHTML = `${Math.round(
@@ -91,5 +77,15 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let currentDayTime = document.getElementById("date-time");
+currentDayTime.innerHTML = displayCurrentDayTime();
+
+document.getElementById("fButton").onclick = function () {
+  convertToF();
+};
+document.getElementById("cButton").onclick = function () {
+  convertToC();
+};
 
 searchCity("New York");
