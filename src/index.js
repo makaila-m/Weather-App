@@ -72,7 +72,9 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-let searchForm = document.querySelector("#search-form");
+// let searchForm = document.querySelector("#search-form");
+console.log('bi');
+console.log(document.querySelector("p"));
 searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
